@@ -38,24 +38,24 @@ public:
     // Remove and return the current element
     ListItemType remove();
 
-    void moveToStart();// Set to front
-    void moveToEnd();  // Set at end
-    void prev();       // Move left
-    void next();       // Move right
-    int length();      // Return list size
-    int currPos();     // Return current position
+    void moveToStart();       // Set to front
+    void moveToEnd();         // Set at end
+    void prev();              // Move left
+    void next();              // Move right
+    int length() const;       // Return list size
+    int currPos() const;      // Return current position
 
     // Set current list position to "pos"
     bool moveToPos(int pos);
 
     // Return true if current position is at end of the list
-    bool isAtEnd();
+    bool isAtEnd() const;
 
     // Return the current element
-    ListItemType getValue();
+    ListItemType getValue() const;
 
     // Check if the list is empty
-    bool isEmpty();
+    bool isEmpty() const;
 
     string to_string() const;
 };

@@ -40,21 +40,21 @@ public:
     virtual void next() =0;
 
     // Return the number of elements in the list
-    virtual int length() =0;
+    virtual int length() const =0;
 
     // Return the position of the current element
-    virtual int currPos() =0;
+    virtual int currPos() const =0;
 
     // Set the current position to "pos"
     virtual bool moveToPos(int pos) =0;
 
     // Return true if current position is at end of the list
-    virtual bool isAtEnd() =0;
+    virtual bool isAtEnd() const =0;
 
     // Return the current element
-    virtual ListItemType getValue() =0;
+    virtual ListItemType getValue() const =0;
 
-    virtual bool isEmpty() =0;
+    virtual bool isEmpty() const =0;
 
     // Returns a string in the form < e0, e1 | e2 >, where the "|" indicates
     // the current position

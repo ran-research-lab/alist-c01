@@ -46,8 +46,8 @@ void AList::moveToStart() { curr = 0; }       // Set to front
 void AList::moveToEnd() { curr = listSize; }  // Set at end
 void AList::prev() { if (curr != 0) curr--; } // Move left
 void AList::next() { if (curr < listSize) curr++; } // Move right
-int AList::length() { return listSize; }      // Return list size
-int AList::currPos() { return curr; }         // Return current position
+int AList::length() const { return listSize; }       // Return list size
+int AList::currPos() const { return curr; }          // Return current position
 
 // Set current list position to "pos"
 bool AList::moveToPos(int pos) {
@@ -57,10 +57,10 @@ bool AList::moveToPos(int pos) {
 }
 
 // Return true if current position is at end of the list
-bool AList::isAtEnd() { return curr == listSize; }
+bool AList::isAtEnd() const { return curr == listSize; }
 
 // Return the current element
-ListItemType AList::getValue() {
+ListItemType AList::getValue() const {
     if ((curr < 0) || (curr >= listSize)) // No current element
         throw std::out_of_range("getvalue() in AList has current of " + std::to_string(curr) +  + " and size of "
                                 + std::to_string(listSize) + " that is not a a valid element");
@@ -68,7 +68,7 @@ ListItemType AList::getValue() {
 }
 
 // Check if the list is empty
-bool AList::isEmpty() { return listSize == 0; }
+bool AList::isEmpty() const { return listSize == 0; }
 
 string AList::to_string() const {
     string res = "<";
