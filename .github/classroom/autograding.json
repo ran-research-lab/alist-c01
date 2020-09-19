@@ -23,7 +23,7 @@
     {
       "name": "run",
       "setup": "",
-      "run": "./catchExample",
+      "run": "./main",
       "input": "",
       "output": "",
       "comparison": "included",
