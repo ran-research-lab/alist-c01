@@ -1,1 +1,1 @@
-# highestFreq using Direct Address Table
+# ADT List implemented using dynamic array

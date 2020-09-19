@@ -1,14 +1,14 @@
-//
-// Created by rarce on 09/19/20.
-//
+// class List:
+// An abstract class for ADT List
+// Code from the OpenDSA book
 
 #ifndef CATCHEXAMPLE_LIST_H
 #define CATCHEXAMPLE_LIST_H
 #include <string>
 using namespace std;
 typedef int ListItemType;
-// List class ADT.
-class List { // List class ADT
+
+class List {
 public:
     // Destructor
     virtual ~List () = default;
@@ -56,6 +56,8 @@ public:
 
     virtual bool isEmpty() =0;
 
+    // Returns a string in the form < e0, e1 | e2 >, where the "|" indicates
+    // the current position
     virtual string to_string() const  = 0;
 };
 

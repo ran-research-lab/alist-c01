@@ -1,30 +1,25 @@
-//
-// Created by rarce on 09/19/20.
-//
+// Implementation of the ADT List using array
+// Code from the OpenDSA book
 
 #include "AList.h"
 #include <string>
 using namespace std;
 
-// Constructors
-// Create a new list object with maximum size "size"
-//AList::AList(int size = DEFAULT_SIZE) : listSize(0), curr(0) {
-//    maxSize = size;
-//    listArray = new ListItemType[size];         // Create listArray
-//}
 
-AList::~AList() { delete [] listArray; }      // destructor to remove array
+
+AList::~AList() { delete [] listArray; }
 
 // Reinitialize the list
-void AList::clear() { listSize = curr = 0; }  // Simply reinitialize values
+void AList::clear() { listSize = curr = 0; }
 
 // Insert "it" at current position
 bool AList::insert(const ListItemType& it) {
     if (listSize >= maxSize) return false;
-    for (int i = listSize; i > curr; i--)  // Shift elements up
-        listArray[i] = listArray[i-1];       // to make room
+    // Shift elements right to make room
+    for (int i = listSize; i > curr; i--)
+        listArray[i] = listArray[i-1];
     listArray[curr] = it;
-    listSize++;                            // Increment list size
+    listSize++;
     return true;
 }
 
@@ -86,7 +81,6 @@ string AList::to_string() const {
     if ( i == curr) res += "|";
     res += ">";
     return res;
-
 
     return "";
 }

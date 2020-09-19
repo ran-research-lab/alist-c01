@@ -11,8 +11,8 @@ int highestFrequency( const vector<int> &v ) {
     return 0;
 }
 
-TEST_CASE( "Testing the highestFrequency() function", "[highestFrequency]" ) {
-    //REQUIRE( highestFrequency(vector<int> {100, 45, 98, 45, 78, 45})  == 3);
+TEST_CASE( "Testing AList class", "[AList]" ) {
+
     AList L;
     L.append(10);
     L.append(20);

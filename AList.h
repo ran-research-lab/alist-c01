@@ -1,6 +1,6 @@
-//
-// Created by rarce on 09/19/20.
-//
+// class AList:
+// An declaration of the ADT List using array
+// Code from the OpenDSA book
 
 #ifndef CATCHEXAMPLE_ALIST_H
 #define CATCHEXAMPLE_ALIST_H
@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <string>
 
-// Array-based list implementation
+
 class AList : public List {
     ListItemType* listArray;            // Array holding list elements
     static const int DEFAULT_SIZE = 10; // Default size
@@ -40,10 +40,10 @@ public:
 
     void moveToStart();// Set to front
     void moveToEnd();  // Set at end
-    void prev(); // Move left
-    void next(); // Move right
+    void prev();       // Move left
+    void next();       // Move right
     int length();      // Return list size
-    int currPos();         // Return current position
+    int currPos();     // Return current position
 
     // Set current list position to "pos"
     bool moveToPos(int pos);
